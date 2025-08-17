@@ -1,0 +1,57 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#f8f9fa"/>
+  <!-- SSD 主体 -->
+  <rect x="50" y="120" width="200" height="60" rx="4" fill="#1a1a1a"/>
+  <!-- 标签贴纸 -->
+  <rect x="55" y="125" width="190" height="50" rx="2" fill="#0066cc"/>
+  
+  <!-- Samsung 标识 -->
+  <text x="150" y="145" fill="white" font-size="16" font-weight="bold" text-anchor="middle">SAMSUNG</text>
+  <text x="150" y="160" fill="#e6f3ff" font-size="12" text-anchor="middle">980 PRO</text>
+  
+  <!-- 容量标识 -->
+  <rect x="180" y="130" width="60" height="20" rx="2" fill="white"/>
+  <text x="210" y="143" fill="#0066cc" font-size="12" font-weight="bold" text-anchor="middle">2TB</text>
+  
+  <!-- M.2 接口 -->
+  <rect x="45" y="135" width="15" height="30" rx="2" fill="#fbbf24"/>
+  <g fill="#e5a000">
+    <rect x="47" y="138" width="2" height="4"/>
+    <rect x="50" y="138" width="2" height="4"/>
+    <rect x="53" y="138" width="2" height="4"/>
+    <rect x="56" y="138" width="2" height="4"/>
+    <rect x="47" y="145" width="2" height="4"/>
+    <rect x="50" y="145" width="2" height="4"/>
+    <rect x="53" y="145" width="2" height="4"/>
+    <rect x="56" y="145" width="2" height="4"/>
+    <rect x="47" y="152" width="2" height="4"/>
+    <rect x="50" y="152" width="2" height="4"/>
+    <rect x="53" y="152" width="2" height="4"/>
+    <rect x="56" y="152" width="2" height="4"/>
+    <rect x="47" y="159" width="2" height="4"/>
+    <rect x="50" y="159" width="2" height="4"/>
+    <rect x="53" y="159" width="2" height="4"/>
+    <rect x="56" y="159" width="2" height="4"/>
+  </g>
+  
+  <!-- 存储芯片 -->
+  <rect x="70" y="135" width="30" height="30" rx="2" fill="#333"/>
+  <rect x="110" y="135" width="30" height="30" rx="2" fill="#333"/>
+  <rect x="150" y="135" width="30" height="30" rx="2" fill="#333"/>
+  
+  <!-- 芯片标识 -->
+  <g fill="#666">
+    <circle cx="85" cy="150" r="2"/>
+    <circle cx="125" cy="150" r="2"/>
+    <circle cx="165" cy="150" r="2"/>
+  </g>
+  
+  <!-- 固定螺丝孔 -->
+  <circle cx="230" cy="150" r="3" fill="#333"/>
+  <circle cx="230" cy="150" r="1.5" fill="#666"/>
+  
+  <!-- 型号标识 -->
+  <text x="150" y="210" fill="#1a1a1a" font-size="16" font-weight="bold" text-anchor="middle">Samsung 980 PRO</text>
+  <text x="150" y="230" fill="#666" font-size="12" text-anchor="middle">M.2 NVMe SSD 2TB</text>
+  <text x="150" y="245" fill="#0066cc" font-size="10" text-anchor="middle">PCIe 4.0 x4</text>
+</svg>

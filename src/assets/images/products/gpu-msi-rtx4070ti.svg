@@ -1,0 +1,57 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#f8f9fa"/>
+  <!-- GPU 主体 -->
+  <rect x="30" y="100" width="240" height="100" rx="8" fill="#dc3545"/>
+  <!-- 散热器外壳 -->
+  <rect x="35" y="105" width="230" height="90" rx="6" fill="#1a1a1a"/>
+  <!-- 散热片 -->
+  <rect x="40" y="110" width="220" height="15" rx="2" fill="#333"/>
+  <rect x="40" y="130" width="220" height="15" rx="2" fill="#333"/>
+  <rect x="40" y="150" width="220" height="15" rx="2" fill="#333"/>
+  <rect x="40" y="170" width="220" height="15" rx="2" fill="#333"/>
+  
+  <!-- 三风扇设计 -->
+  <circle cx="80" cy="150" r="25" fill="#444"/>
+  <circle cx="150" cy="150" r="25" fill="#444"/>
+  <circle cx="220" cy="150" r="25" fill="#444"/>
+  
+  <!-- 风扇叶片 -->
+  <g fill="#666">
+    <!-- 左风扇 -->
+    <path d="M80 130 L88 138 L80 150 L72 138 Z"/>
+    <path d="M80 150 L88 162 L80 170 L72 162 Z"/>
+    <path d="M100 150 L88 138 L80 150 L88 162 Z"/>
+    <path d="M60 150 L72 138 L80 150 L72 162 Z"/>
+    
+    <!-- 中风扇 -->
+    <path d="M150 130 L158 138 L150 150 L142 138 Z"/>
+    <path d="M150 150 L158 162 L150 170 L142 162 Z"/>
+    <path d="M170 150 L158 138 L150 150 L158 162 Z"/>
+    <path d="M130 150 L142 138 L150 150 L142 162 Z"/>
+    
+    <!-- 右风扇 -->
+    <path d="M220 130 L228 138 L220 150 L212 138 Z"/>
+    <path d="M220 150 L228 162 L220 170 L212 162 Z"/>
+    <path d="M240 150 L228 138 L220 150 L228 162 Z"/>
+    <path d="M200 150 L212 138 L220 150 L212 162 Z"/>
+  </g>
+  
+  <!-- MSI 标识 -->
+  <rect x="120" y="115" width="60" height="20" rx="4" fill="#dc3545"/>
+  <text x="150" y="128" fill="white" font-size="12" font-weight="bold" text-anchor="middle">MSI</text>
+  
+  <!-- 接口 -->
+  <rect x="270" y="130" width="20" height="40" rx="4" fill="#2d2d2d"/>
+  <rect x="275" y="135" width="10" height="10" fill="#666"/>
+  <rect x="275" y="155" width="10" height="10" fill="#666"/>
+  
+  <!-- 电源接口 -->
+  <rect x="200" y="90" width="40" height="8" rx="2" fill="#1a1a1a"/>
+  <rect x="205" y="92" width="6" height="4" fill="#fbbf24"/>
+  <rect x="215" y="92" width="6" height="4" fill="#fbbf24"/>
+  <rect x="225" y="92" width="6" height="4" fill="#fbbf24"/>
+  
+  <!-- 型号标识 -->
+  <text x="150" y="230" fill="#1a1a1a" font-size="16" font-weight="bold" text-anchor="middle">RTX 4070 Ti</text>
+  <text x="150" y="250" fill="#666" font-size="12" text-anchor="middle">GAMING X TRIO</text>
+</svg>

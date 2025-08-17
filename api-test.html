@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .api-section {
+            margin-bottom: 30px;
+        }
+        .api-url {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 10px 0;
+            border-left: 4px solid #007bff;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .result pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .search-input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 10px;
+            width: 200px;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>电脑配件商城 API 测试</h1>
+        <div id="server-status" class="status">检查服务器状态...</div>
+        
+        <div class="api-section">
+            <h2>商品接口</h2>
+            
+            <div>
+                <h3>获取所有商品</h3>
+                <div class="api-url">GET /api/products</div>
+                <button onclick="testAPI('/api/products')">测试</button>
+                <button onclick="testAPI('/api/products?category=graphics-card')">按分类筛选(显卡)</button>
+                <button onclick="testAPI('/api/products?brand=NVIDIA')">按品牌筛选(NVIDIA)</button>
+            </div>
+            
+            <div>
+                <h3>获取单个商品</h3>
+                <div class="api-url">GET /api/products/:id</div>
+                <button onclick="testAPI('/api/products/1')">获取商品1</button>
+                <button onclick="testAPI('/api/products/2')">获取商品2</button>
+            </div>
+            
+            <div>
+                <h3>特色商品和畅销商品</h3>
+                <div class="api-url">GET /api/products/featured</div>
+                <div class="api-url">GET /api/products/bestsellers</div>
+                <button onclick="testAPI('/api/products/featured')">特色商品</button>
+                <button onclick="testAPI('/api/products/bestsellers')">畅销商品</button>
+            </div>
+            
+            <div>
+                <h3>搜索商品</h3>
+                <div class="api-url">GET /api/search?q=关键词</div>
+                <input type="text" id="searchInput" class="search-input" placeholder="输入搜索关键词" value="RTX">
+                <button onclick="searchProducts()">搜索</button>
+            </div>
+        </div>
+        
+        <div class="api-section">
+            <h2>分类和品牌</h2>
+            <div class="api-url">GET /api/categories</div>
+            <div class="api-url">GET /api/brands</div>
+            <button onclick="testAPI('/api/categories')">获取分类</button>
+            <button onclick="testAPI('/api/brands')">获取品牌</button>
+        </div>
+        
+        <div class="api-section">
+            <h2>测试结果</h2>
+            <div id="result" class="result">
+                <pre>点击上方按钮测试API接口...</pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:3001';
+        
+        // 检查服务器状态
+        async function checkServerStatus() {
+            const statusDiv = document.getElementById('server-status');
+            try {
+                const response = await fetch(`${API_BASE}/api/products`);
+                if (response.ok) {
+                    statusDiv.textContent = 'API服务器运行正常 (http://localhost:3001)';
+                    statusDiv.className = 'status success';
+                } else {
+                    throw new Error('服务器响应异常');
+                }
+            } catch (error) {
+                statusDiv.textContent = 'API服务器连接失败，请确保服务器已启动';
+                statusDiv.className = 'status error';
+            }
+        }
+        
+        // 测试API接口
+        async function testAPI(endpoint) {
+            const resultDiv = document.getElementById('result');
+            const url = `${API_BASE}${endpoint}`;
+            
+            resultDiv.innerHTML = `<pre>正在请求: ${url}</pre>`;
+            
+            try {
+                const startTime = Date.now();
+                const response = await fetch(url);
+                const endTime = Date.now();
+                const data = await response.json();
+                
+                const result = {
+                    url: url,
+                    status: response.status,
+                    statusText: response.statusText,
+                    responseTime: `${endTime - startTime}ms`,
+                    data: data
+                };
+                
+                resultDiv.innerHTML = `<pre>${JSON.stringify(result, null, 2)}</pre>`;
+            } catch (error) {
+                resultDiv.innerHTML = `<pre style="color: red;">错误: ${error.message}</pre>`;
+            }
+        }
+        
+        // 搜索商品
+        function searchProducts() {
+            const keyword = document.getElementById('searchInput').value;
+            if (keyword.trim()) {
+                testAPI(`/api/search?q=${encodeURIComponent(keyword)}`);
+            } else {
+                alert('请输入搜索关键词');
+            }
+        }
+        
+        // 页面加载时检查服务器状态
+        window.onload = function() {
+            checkServerStatus();
+        };
+        
+        // 回车键搜索
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchProducts();
+            }
+        });
+    </script>
+</body>
+</html>

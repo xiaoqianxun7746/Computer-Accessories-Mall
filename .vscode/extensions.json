@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+    "formulahendry.auto-rename-tag",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-eslint",
+    "eamodio.gitlens",
+    "ritwickdey.liveserver",
+    "ms-vscode.vscode-json"
+  ]
+}

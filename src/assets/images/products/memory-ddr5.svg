@@ -1,0 +1,78 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#f8f9fa"/>
+  <!-- 内存条主体 -->
+  <rect x="80" y="60" width="140" height="180" rx="8" fill="#1a1a1a"/>
+  <!-- 散热片 -->
+  <rect x="85" y="65" width="130" height="170" rx="4" fill="#2d2d2d"/>
+  <!-- 散热片纹理 -->
+  <g fill="#444">
+    <rect x="90" y="70" width="120" height="2"/>
+    <rect x="90" y="80" width="120" height="2"/>
+    <rect x="90" y="90" width="120" height="2"/>
+    <rect x="90" y="100" width="120" height="2"/>
+    <rect x="90" y="110" width="120" height="2"/>
+    <rect x="90" y="120" width="120" height="2"/>
+    <rect x="90" y="130" width="120" height="2"/>
+    <rect x="90" y="140" width="120" height="2"/>
+    <rect x="90" y="150" width="120" height="2"/>
+    <rect x="90" y="160" width="120" height="2"/>
+    <rect x="90" y="170" width="120" height="2"/>
+    <rect x="90" y="180" width="120" height="2"/>
+    <rect x="90" y="190" width="120" height="2"/>
+    <rect x="90" y="200" width="120" height="2"/>
+    <rect x="90" y="210" width="120" height="2"/>
+    <rect x="90" y="220" width="120" height="2"/>
+  </g>
+  <!-- 内存芯片 -->
+  <rect x="95" y="75" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="125" y="75" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="155" y="75" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="185" y="75" width="20" height="15" rx="2" fill="#666"/>
+  
+  <rect x="95" y="100" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="125" y="100" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="155" y="100" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="185" y="100" width="20" height="15" rx="2" fill="#666"/>
+  
+  <rect x="95" y="125" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="125" y="125" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="155" y="125" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="185" y="125" width="20" height="15" rx="2" fill="#666"/>
+  
+  <rect x="95" y="150" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="125" y="150" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="155" y="150" width="20" height="15" rx="2" fill="#666"/>
+  <rect x="185" y="150" width="20" height="15" rx="2" fill="#666"/>
+  
+  <!-- 金手指 -->
+  <g fill="#fbbf24">
+    <rect x="85" y="245" width="4" height="15"/>
+    <rect x="92" y="245" width="4" height="15"/>
+    <rect x="99" y="245" width="4" height="15"/>
+    <rect x="106" y="245" width="4" height="15"/>
+    <rect x="113" y="245" width="4" height="15"/>
+    <rect x="120" y="245" width="4" height="15"/>
+    <rect x="127" y="245" width="4" height="15"/>
+    <rect x="134" y="245" width="4" height="15"/>
+    <rect x="141" y="245" width="4" height="15"/>
+    <rect x="148" y="245" width="4" height="15"/>
+    <rect x="155" y="245" width="4" height="15"/>
+    <rect x="162" y="245" width="4" height="15"/>
+    <rect x="169" y="245" width="4" height="15"/>
+    <rect x="176" y="245" width="4" height="15"/>
+    <rect x="183" y="245" width="4" height="15"/>
+    <rect x="190" y="245" width="4" height="15"/>
+    <rect x="197" y="245" width="4" height="15"/>
+    <rect x="204" y="245" width="4" height="15"/>
+    <rect x="211" y="245" width="4" height="15"/>
+  </g>
+  <!-- 缺口 -->
+  <rect x="140" y="245" width="20" height="15" fill="#f8f9fa"/>
+  
+  <!-- 品牌标识 -->
+  <text x="150" y="200" fill="white" font-size="14" font-weight="bold" text-anchor="middle">DDR5</text>
+  <text x="150" y="215" fill="#94a3b8" font-size="12" text-anchor="middle">5600MHz</text>
+  
+  <!-- 型号标识 -->
+  <text x="150" y="280" fill="#1a1a1a" font-size="16" font-weight="bold" text-anchor="middle">32GB Kit</text>
+</svg>

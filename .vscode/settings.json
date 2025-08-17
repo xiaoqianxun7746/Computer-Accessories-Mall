@@ -1,0 +1,27 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "emmet.includeLanguages": {
+    "vue": "html"
+  },
+  "files.associations": {
+    "*.vue": "vue"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "files.eol": "\n",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.git": true
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true
+  },
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "single"
+}
